@@ -33,7 +33,11 @@ function sendError(res, err) {
 
 function isUrlAllowed(config, url) {
     const whiteList = config.whitelist || [];
-    return _.some(whiteList, (urlPattern) => new UrlPattern(urlPattern).match(url));
+    if (!url.match(/wormbase.org/)) {
+        return false;
+    }
+    return true;
+    //return _.some(whiteList, (urlPattern) => new UrlPattern(urlPattern).match(url));
 }
 
 
