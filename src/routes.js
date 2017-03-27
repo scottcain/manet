@@ -32,7 +32,7 @@ function sendError(res, err) {
 }
 
 function isUrlAllowed(config, url) {
-//    const whiteList = config.whitelist || [];
+    const whiteList = config.whitelist || [];
 //    if (url.match(/wormbase.org/) || url.match(/alliancegenome.org/) || url.match(/scottcain.net/) ) {
 //        return true;
 //    }
