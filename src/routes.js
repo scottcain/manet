@@ -54,9 +54,9 @@ function sendImageInResponse(res, config, options) {
         if (err) {
             sendError(res, badCapturing(options.url));
         } else {
-            if (config.cors) {
+            //if (config.cors) {
                 enableCORS(res);
-            }
+            //}
             res.sendFile(file, (err) => {
                 if (err) {
                     sendError(res, 'Error while sending data file: ' + err.message);
